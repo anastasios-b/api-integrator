@@ -4,7 +4,7 @@ This repository contains three demo APIs that can be used to test API integratio
 
 # Working Tool
 
-Visit [the product's page](https://anastasios-bolkas.tech/products/api-integrator){target="_blank"} to test the connections live - or build yours.
+Visit [the product's page](https://anastasios-bolkas.tech/products/api-integrator){:target="_blank"} to test the connections live - or build yours.
 
 ## Table of Contents
 
