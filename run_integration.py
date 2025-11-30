@@ -43,7 +43,7 @@ def integrate():
 
     # Fetch data from API 2
     print(f"Fetching data from API 2...")
-    response = requests.request(method=api_2_method, url=api_2_url, headers=api_2_headers)
+    response = requests.request(method=api_2_method, url=api_2_url, headers=api_2_headers, json={})
     if response.status_code >= 200 and response.status_code < 300:
         api_2_data = response.json()
         print(f"✓ Successfully received data from API 2")
