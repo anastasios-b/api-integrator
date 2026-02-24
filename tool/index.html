@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Integrator</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-mobile.css">
+
+    <script src="scripts.js" defer></script>
+    <script src="sources-list.js" defer></script>
+    <script src="sources-map.js" defer></script>
+    <script src="test-mappings.js" defer></script>
+    <script src="code-generation.js" defer></script>
+</head>
+
+<body class="api-integrator">
+    <header>
+        <h1>API Integrator • Visual API Mapping Tool</h1>
+    </header>
+
+    <main>
+        <!-- Add and manage sources -->
+        <section id="sources-list">
+            <h2 class="section-title">
+                Sources List
+                <div class="btn btn-secondary" id="add-source-button">Add Source</div>
+            </h2>
+            <p class="section-description">Define and manage your data sources (APIs and databases). Add, edit, or
+                delete sources to get started with API integration.</p>
+            <div class="section-divider"></div>
+            <div id="sources-container"></div>
+        </section>
+
+        <!-- Visualize sources map -->
+        <section id="sources-map">
+            <h2 class="section-title">Sources Map</h2>
+            <p class="section-description">Visualize the relationships and mappings between your different data sources.
+            </p>
+            <div class="section-divider"></div>
+            <div style="display: flex; gap: 20px;">
+                <div style="flex: 1;">
+                    <div id="sources-map-container">
+                        <!-- Sources map will be dynamically loaded here -->
+                    </div>
+                </div>
+                <div style="width: 300px; min-width: 300px;">
+                    <div id="connections-list-container">
+                        <h3>Field Connections</h3>
+                        <ul class="connections-list" id="connections-list">
+                            <li class="connections-list-empty">No connections yet</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Test mappings -->
+        <section id="test-mappings">
+            <h2 class="section-title">Test Mappings</h2>
+            <p class="section-description">Test the data mappings between your sources to ensure correct data
+                transformation and flow.</p>
+            <div class="section-divider"></div>
+            <div id="test-mappings-container">
+                <!-- Mapping tests will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Code generation happens here -->
+        <section id="code-generation">
+            <h2 class="section-title">Generated Code</h2>
+            <p class="section-description">Generate integration code in multiple languages based on your configured
+                sources and mappings.</p>
+            <div class="section-divider"></div>
+            <div id="code-generation-languages">
+                <div class="btn btn-secondary btn-small" data-code-generation-language="python">Python</div>
+                <div class="btn btn-secondary btn-small" data-code-generation-language="php">PHP</div>
+                <div class="btn btn-secondary btn-small" data-code-generation-language="go">Go</div>
+            </div>
+            <div class="code-container">
+                <button id="copy-code-btn" class="btn btn-small" style="display: none;">
+                    <span>📋 Copy Code</span>
+                </button>
+                <pre><code id="generated-code">// Your generated code will appear here.</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Developed by <a href="https://anastasios-bolkas.tech/" rel="noopener" target="_blank">Anastasios
+                    Bolkas</a></p>
+        </div>
+    </footer>
+
+    <div id="modal">
+        <div id="modal-content">
+            <span id="modal-close">&times;</span>
+            <div id="modal-body">
+                <!-- Modal content will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
